@@ -29,6 +29,8 @@ class AddRecipeVC: UIViewController {
         return button
     }()
     
+    var delegate: SettingNewValueDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray
@@ -59,6 +61,10 @@ class AddRecipeVC: UIViewController {
         addButton.addTarget(self, action: #selector(addRecipe), for: .touchUpInside)
     }
     
-    @objc private func addRecipe() { }
-    
+    @objc private func addRecipe() {
+        if let title = titleTF.text {
+            delegate?.setting(name: title)
+            navigationController?.popToRootViewController(animated: true)
+        }
+    }
 }
