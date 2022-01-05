@@ -14,6 +14,10 @@
 		672D5D8A2785D0AA0077983B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672D5D892785D0AA0077983B /* Assets.xcassets */; };
 		672D5D8D2785D0AA0077983B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672D5D8B2785D0AA0077983B /* LaunchScreen.storyboard */; };
 		67D1F5F02785E9C900EE714F /* IngredientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D1F5EF2785E9C900EE714F /* IngredientsVC.swift */; };
+		67D1F5F42785EFAA00EE714F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D1F5F32785EFAA00EE714F /* StorageManager.swift */; };
+		67D1F5F82785F01B00EE714F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D1F5F72785F01B00EE714F /* Recipe.swift */; };
+		67D1F5FA2785F3A000EE714F /* AddRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D1F5F92785F3A000EE714F /* AddRecipeVC.swift */; };
+		67D1F5FD2785F7CE00EE714F /* UITextField + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D1F5FC2785F7CE00EE714F /* UITextField + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		672D5D8C2785D0AA0077983B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		672D5D8E2785D0AA0077983B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67D1F5EF2785E9C900EE714F /* IngredientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsVC.swift; sourceTree = "<group>"; };
+		67D1F5F32785EFAA00EE714F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		67D1F5F72785F01B00EE714F /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		67D1F5F92785F3A000EE714F /* AddRecipeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeVC.swift; sourceTree = "<group>"; };
+		67D1F5FC2785F7CE00EE714F /* UITextField + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 				663099692785D42F003015FC /* MainVC.swift */,
 				6630996B2785D48E003015FC /* PurchaseVC.swift */,
 				67D1F5EF2785E9C900EE714F /* IngredientsVC.swift */,
+				67D1F5F92785F3A000EE714F /* AddRecipeVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -80,10 +89,37 @@
 		672D5D7F2785D0A50077983B /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				67D1F5FB2785F76C00EE714F /* Extensions */,
+				67D1F5F62785F00E00EE714F /* Models */,
+				67D1F5F22785EF6900EE714F /* Services */,
 				6630996D2785EE45003015FC /* Screens */,
 				6630996E2785EE50003015FC /* Support */,
 			);
 			path = Recipes;
+			sourceTree = "<group>";
+		};
+		67D1F5F22785EF6900EE714F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				67D1F5F32785EFAA00EE714F /* StorageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		67D1F5F62785F00E00EE714F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				67D1F5F72785F01B00EE714F /* Recipe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		67D1F5FB2785F76C00EE714F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				67D1F5FC2785F7CE00EE714F /* UITextField + Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +193,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				672D5D812785D0A50077983B /* AppDelegate.swift in Sources */,
+				67D1F5FD2785F7CE00EE714F /* UITextField + Ext.swift in Sources */,
 				6630996A2785D42F003015FC /* MainVC.swift in Sources */,
+				67D1F5F82785F01B00EE714F /* Recipe.swift in Sources */,
 				67D1F5F02785E9C900EE714F /* IngredientsVC.swift in Sources */,
+				67D1F5F42785EFAA00EE714F /* StorageManager.swift in Sources */,
 				6630996C2785D48E003015FC /* PurchaseVC.swift in Sources */,
+				67D1F5FA2785F3A000EE714F /* AddRecipeVC.swift in Sources */,
 				672D5D832785D0A50077983B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

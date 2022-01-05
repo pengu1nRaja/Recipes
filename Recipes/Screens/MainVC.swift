@@ -44,7 +44,13 @@ class MainVC: UIViewController {
     }
     
     private func setupNavBar() {
-        navigationController?.navigationBar.prefersLargeTitles = true
+        let item = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addRecipe))
+        navigationItem.rightBarButtonItem = item
+    }
+    
+    @objc private func addRecipe() {
+        let addVC = AddRecipeVC()
+        navigationController?.pushViewController(addVC, animated: true)
     }
 }
 
