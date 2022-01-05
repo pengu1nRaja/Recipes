@@ -1,5 +1,5 @@
 //
-//  RCMainVC.swift
+//  MainVC.swift
 //  Recipes
 //
 //  Created by Меньков Д.В. on 05.01.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RCMainVC: UIViewController {
+class MainVC: UIViewController {
     
     // MARK: - Constants
     
@@ -48,7 +48,7 @@ class RCMainVC: UIViewController {
     }
 }
 
-extension RCMainVC: UITableViewDelegate, UITableViewDataSource {
+extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - UITableViewDelegate, UITableViewDataSource
     

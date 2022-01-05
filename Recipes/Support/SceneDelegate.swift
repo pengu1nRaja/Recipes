@@ -33,7 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func createMainNavigationController() -> UINavigationController {
-        let mainVC = RCMainVC()
+        let mainVC = MainVC()
         mainVC.title = "Main"
         mainVC.tabBarItem = UITabBarItem(title: "Рецепты", image: UIImage(systemName: "house"), tag: 0)
         
@@ -41,7 +41,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func createPurchaseNavigationController() -> UINavigationController {
-        let purchaseVC = RCPurchaseVC()
+        let purchaseVC = PurchaseVC()
         purchaseVC.title = "Purchase"
         purchaseVC.tabBarItem = UITabBarItem(title: "Список покупок", image: UIImage(systemName: "checklist"), tag: 1)
         
@@ -49,7 +49,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func createIngredientNavigationController() -> UINavigationController {
-        let ingredientsVC = RCIngredientsVC()
+        let ingredientsVC = IngredientsVC()
         ingredientsVC.title = "Ingredients"
         ingredientsVC.tabBarItem = UITabBarItem(title: "Ингредиенты", image: UIImage(systemName: "text.badge.plus"), tag: 2)
         

@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6630996A2785D42F003015FC /* RCMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663099692785D42F003015FC /* RCMainVC.swift */; };
-		6630996C2785D48E003015FC /* RCPurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6630996B2785D48E003015FC /* RCPurchaseVC.swift */; };
+		6630996A2785D42F003015FC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663099692785D42F003015FC /* MainVC.swift */; };
+		6630996C2785D48E003015FC /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6630996B2785D48E003015FC /* PurchaseVC.swift */; };
 		672D5D812785D0A50077983B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D5D802785D0A50077983B /* AppDelegate.swift */; };
 		672D5D832785D0A50077983B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D5D822785D0A50077983B /* SceneDelegate.swift */; };
 		672D5D8A2785D0AA0077983B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672D5D892785D0AA0077983B /* Assets.xcassets */; };
 		672D5D8D2785D0AA0077983B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672D5D8B2785D0AA0077983B /* LaunchScreen.storyboard */; };
-		67D1F5F02785E9C900EE714F /* RCIngredientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D1F5EF2785E9C900EE714F /* RCIngredientsVC.swift */; };
+		67D1F5F02785E9C900EE714F /* IngredientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D1F5EF2785E9C900EE714F /* IngredientsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		663099692785D42F003015FC /* RCMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCMainVC.swift; sourceTree = "<group>"; };
-		6630996B2785D48E003015FC /* RCPurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCPurchaseVC.swift; sourceTree = "<group>"; };
+		663099692785D42F003015FC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		6630996B2785D48E003015FC /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
 		672D5D7D2785D0A50077983B /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		672D5D802785D0A50077983B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		672D5D822785D0A50077983B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		672D5D892785D0AA0077983B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		672D5D8C2785D0AA0077983B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		672D5D8E2785D0AA0077983B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67D1F5EF2785E9C900EE714F /* RCIngredientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCIngredientsVC.swift; sourceTree = "<group>"; };
+		67D1F5EF2785E9C900EE714F /* IngredientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +39,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6630996D2785EE45003015FC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				663099692785D42F003015FC /* MainVC.swift */,
+				6630996B2785D48E003015FC /* PurchaseVC.swift */,
+				67D1F5EF2785E9C900EE714F /* IngredientsVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		6630996E2785EE50003015FC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				672D5D802785D0A50077983B /* AppDelegate.swift */,
+				672D5D822785D0A50077983B /* SceneDelegate.swift */,
+				672D5D892785D0AA0077983B /* Assets.xcassets */,
+				672D5D8B2785D0AA0077983B /* LaunchScreen.storyboard */,
+				672D5D8E2785D0AA0077983B /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		672D5D742785D0A50077983B = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +80,8 @@
 		672D5D7F2785D0A50077983B /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
-				672D5D802785D0A50077983B /* AppDelegate.swift */,
-				672D5D822785D0A50077983B /* SceneDelegate.swift */,
-				663099692785D42F003015FC /* RCMainVC.swift */,
-				6630996B2785D48E003015FC /* RCPurchaseVC.swift */,
-				67D1F5EF2785E9C900EE714F /* RCIngredientsVC.swift */,
-				672D5D892785D0AA0077983B /* Assets.xcassets */,
-				672D5D8B2785D0AA0077983B /* LaunchScreen.storyboard */,
-				672D5D8E2785D0AA0077983B /* Info.plist */,
+				6630996D2785EE45003015FC /* Screens */,
+				6630996E2785EE50003015FC /* Support */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -141,9 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				672D5D812785D0A50077983B /* AppDelegate.swift in Sources */,
-				6630996A2785D42F003015FC /* RCMainVC.swift in Sources */,
-				67D1F5F02785E9C900EE714F /* RCIngredientsVC.swift in Sources */,
-				6630996C2785D48E003015FC /* RCPurchaseVC.swift in Sources */,
+				6630996A2785D42F003015FC /* MainVC.swift in Sources */,
+				67D1F5F02785E9C900EE714F /* IngredientsVC.swift in Sources */,
+				6630996C2785D48E003015FC /* PurchaseVC.swift in Sources */,
 				672D5D832785D0A50077983B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +303,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D8C7N2PLY3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Recipes/Info.plist;
+				INFOPLIST_FILE = Recipes/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -316,7 +332,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D8C7N2PLY3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Recipes/Info.plist;
+				INFOPLIST_FILE = Recipes/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
