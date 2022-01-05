@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6630996A2785D42F003015FC /* RCMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663099692785D42F003015FC /* RCMainVC.swift */; };
+		6630996C2785D48E003015FC /* RCPurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6630996B2785D48E003015FC /* RCPurchaseVC.swift */; };
 		672D5D812785D0A50077983B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D5D802785D0A50077983B /* AppDelegate.swift */; };
 		672D5D832785D0A50077983B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D5D822785D0A50077983B /* SceneDelegate.swift */; };
 		672D5D8A2785D0AA0077983B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672D5D892785D0AA0077983B /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		663099692785D42F003015FC /* RCMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCMainVC.swift; sourceTree = "<group>"; };
+		6630996B2785D48E003015FC /* RCPurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCPurchaseVC.swift; sourceTree = "<group>"; };
 		672D5D7D2785D0A50077983B /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		672D5D802785D0A50077983B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		672D5D822785D0A50077983B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 			children = (
 				672D5D802785D0A50077983B /* AppDelegate.swift */,
 				672D5D822785D0A50077983B /* SceneDelegate.swift */,
+				663099692785D42F003015FC /* RCMainVC.swift */,
+				6630996B2785D48E003015FC /* RCPurchaseVC.swift */,
 				672D5D892785D0AA0077983B /* Assets.xcassets */,
 				672D5D8B2785D0AA0077983B /* LaunchScreen.storyboard */,
 				672D5D8E2785D0AA0077983B /* Info.plist */,
@@ -132,6 +138,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				672D5D812785D0A50077983B /* AppDelegate.swift in Sources */,
+				6630996A2785D42F003015FC /* RCMainVC.swift in Sources */,
+				6630996C2785D48E003015FC /* RCPurchaseVC.swift in Sources */,
 				672D5D832785D0A50077983B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
