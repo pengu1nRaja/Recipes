@@ -13,6 +13,7 @@
 		672D5D832785D0A50077983B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D5D822785D0A50077983B /* SceneDelegate.swift */; };
 		672D5D8A2785D0AA0077983B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672D5D892785D0AA0077983B /* Assets.xcassets */; };
 		672D5D8D2785D0AA0077983B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672D5D8B2785D0AA0077983B /* LaunchScreen.storyboard */; };
+		67D1F5F02785E9C900EE714F /* RCIngredientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D1F5EF2785E9C900EE714F /* RCIngredientsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		672D5D892785D0AA0077983B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		672D5D8C2785D0AA0077983B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		672D5D8E2785D0AA0077983B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67D1F5EF2785E9C900EE714F /* RCIngredientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCIngredientsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				672D5D822785D0A50077983B /* SceneDelegate.swift */,
 				663099692785D42F003015FC /* RCMainVC.swift */,
 				6630996B2785D48E003015FC /* RCPurchaseVC.swift */,
+				67D1F5EF2785E9C900EE714F /* RCIngredientsVC.swift */,
 				672D5D892785D0AA0077983B /* Assets.xcassets */,
 				672D5D8B2785D0AA0077983B /* LaunchScreen.storyboard */,
 				672D5D8E2785D0AA0077983B /* Info.plist */,
@@ -139,6 +142,7 @@
 			files = (
 				672D5D812785D0A50077983B /* AppDelegate.swift in Sources */,
 				6630996A2785D42F003015FC /* RCMainVC.swift in Sources */,
+				67D1F5F02785E9C900EE714F /* RCIngredientsVC.swift in Sources */,
 				6630996C2785D48E003015FC /* RCPurchaseVC.swift in Sources */,
 				672D5D832785D0A50077983B /* SceneDelegate.swift in Sources */,
 			);

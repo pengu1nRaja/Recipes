@@ -24,9 +24,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabbar = UITabBarController()
         UITabBar.appearance().tintColor = .black
         UITabBar.appearance().backgroundColor = .systemBackground
-        let mainVC = createMainNavigationController()
-        let purchaseVC = createPurchaseNavigationController()
-        tabbar.viewControllers = [mainVC, purchaseVC]
+        let mainNC = createMainNavigationController()
+        let purchaseNC = createPurchaseNavigationController()
+        let ingredientsNC = createIngredientNavigationController()
+        tabbar.viewControllers = [mainNC, purchaseNC, ingredientsNC]
         
         return tabbar
     }
@@ -34,7 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func createMainNavigationController() -> UINavigationController {
         let mainVC = RCMainVC()
         mainVC.title = "Main"
-        mainVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        mainVC.tabBarItem = UITabBarItem(title: "Рецепты", image: UIImage(systemName: "house"), tag: 0)
         
         return UINavigationController(rootViewController: mainVC)
     }
@@ -42,9 +43,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func createPurchaseNavigationController() -> UINavigationController {
         let purchaseVC = RCPurchaseVC()
         purchaseVC.title = "Purchase"
-        purchaseVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        purchaseVC.tabBarItem = UITabBarItem(title: "Список покупок", image: UIImage(systemName: "checklist"), tag: 1)
         
         return UINavigationController(rootViewController: purchaseVC)
+    }
+    
+    private func createIngredientNavigationController() -> UINavigationController {
+        let ingredientsVC = RCIngredientsVC()
+        ingredientsVC.title = "Ingredients"
+        ingredientsVC.tabBarItem = UITabBarItem(title: "Ингредиенты", image: UIImage(systemName: "text.badge.plus"), tag: 2)
+        
+        return UINavigationController(rootViewController: ingredientsVC)
     }
     
     private func configureNavigationBar() {
