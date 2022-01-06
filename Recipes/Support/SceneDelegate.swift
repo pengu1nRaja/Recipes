@@ -21,14 +21,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func createTabbar() -> UITabBarController {
         let tabbar = UITabBarController()
+        let customTB = CustomTabBar()
         UITabBar.appearance().tintColor = .secondarySystemBackground
         UITabBar.appearance().backgroundColor = .systemBackground
         let mainNC = createMainNavigationController()
         let purchaseNC = createPurchaseNavigationController()
+        let addNC = createEmptyController()
         let ingredientsNC = createIngredientNavigationController()
+        let settingNC = createSettingsNavigationController()
         tabbar.viewControllers = [mainNC, purchaseNC, ingredientsNC]
+        customTB.viewControllers = [mainNC, purchaseNC, addNC, ingredientsNC, settingNC]
         
-        return tabbar
+        return customTB
     }
     
     private func createMainNavigationController() -> UINavigationController {
@@ -37,6 +41,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         mainVC.tabBarItem = UITabBarItem(title: "Рецепты", image: ImageConstant.homeIcon, tag: 0)
         
         return UINavigationController(rootViewController: mainVC)
+    }
+    
+    private func createEmptyController() -> UINavigationController {
+        let emptyVC = EmptyVC()
+        return UINavigationController(rootViewController: emptyVC)
     }
     
     private func createPurchaseNavigationController() -> UINavigationController {
@@ -51,6 +60,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let ingredientsVC = IngredientsVC()
         ingredientsVC.title = "Ингредиенты"
         ingredientsVC.tabBarItem = UITabBarItem(title: "Ингредиенты", image: ImageConstant.ingredientIcon, tag: 2)
+        
+        return UINavigationController(rootViewController: ingredientsVC)
+    }
+    
+    private func createSettingsNavigationController() -> UINavigationController {
+        let ingredientsVC = IngredientsVC()
+        ingredientsVC.title = "Настройки"
+        ingredientsVC.tabBarItem = UITabBarItem(title: "Настройки", image: ImageConstant.settingsIcon, tag: 3)
         
         return UINavigationController(rootViewController: ingredientsVC)
     }
