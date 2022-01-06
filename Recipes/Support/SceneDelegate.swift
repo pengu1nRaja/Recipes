@@ -14,15 +14,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        
+        configureNavigationBar()
         window?.rootViewController = createTabbar()
         window?.makeKeyAndVisible()
-        configureNavigationBar()
     }
     
     private func createTabbar() -> UITabBarController {
         let tabbar = UITabBarController()
-        UITabBar.appearance().tintColor = .black
+        UITabBar.appearance().tintColor = .secondarySystemBackground
         UITabBar.appearance().backgroundColor = .systemBackground
         let mainNC = createMainNavigationController()
         let purchaseNC = createPurchaseNavigationController()
@@ -34,30 +33,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func createMainNavigationController() -> UINavigationController {
         let mainVC = MainVC()
-        mainVC.title = "Main"
-        mainVC.tabBarItem = UITabBarItem(title: "Рецепты", image: UIImage(systemName: "house"), tag: 0)
+        mainVC.title = "Рецепты"
+        mainVC.tabBarItem = UITabBarItem(title: "Рецепты", image: ImageConstant.homeIcon, tag: 0)
         
         return UINavigationController(rootViewController: mainVC)
     }
     
     private func createPurchaseNavigationController() -> UINavigationController {
         let purchaseVC = PurchaseVC()
-        purchaseVC.title = "Purchase"
-        purchaseVC.tabBarItem = UITabBarItem(title: "Список покупок", image: UIImage(systemName: "checklist"), tag: 1)
+        purchaseVC.title = "Список покупок"
+        purchaseVC.tabBarItem = UITabBarItem(title: "Список покупок", image: ImageConstant.purchaseIcon, tag: 1)
         
         return UINavigationController(rootViewController: purchaseVC)
     }
     
     private func createIngredientNavigationController() -> UINavigationController {
         let ingredientsVC = IngredientsVC()
-        ingredientsVC.title = "Ingredients"
-        ingredientsVC.tabBarItem = UITabBarItem(title: "Ингредиенты", image: UIImage(systemName: "text.badge.plus"), tag: 2)
+        ingredientsVC.title = "Ингредиенты"
+        ingredientsVC.tabBarItem = UITabBarItem(title: "Ингредиенты", image: ImageConstant.ingredientIcon, tag: 2)
         
         return UINavigationController(rootViewController: ingredientsVC)
     }
     
     private func configureNavigationBar() {
-        UINavigationBar.appearance().tintColor = .systemGreen
+        UINavigationBar.appearance().tintColor = .secondarySystemBackground
     }
 
     func sceneDidDisconnect(_ scene: UIScene) { }

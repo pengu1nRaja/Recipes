@@ -12,12 +12,22 @@ class AddRecipeVC: UIViewController {
     private lazy var titleTF: UITextField = {
         let textfield = UITextField()
         textfield.placeholder = "Введите название рецепта"
-        textfield.layer.borderColor = UIColor.black.cgColor
-        textfield.layer.borderWidth = 1
         textfield.layer.cornerRadius = 10
         textfield.font = UIFont.systemFont(ofSize: 20)
         textfield.setLeftPaddingPoints(8)
         textfield.setRightPaddingPoints(8)
+        textfield.returnKeyType = .done
+        return textfield
+    }()
+    
+    private lazy var ingredientTF: UITextField = {
+        let textfield = UITextField()
+        textfield.placeholder = "Введите ингредиента"
+        textfield.layer.cornerRadius = 10
+        textfield.font = UIFont.systemFont(ofSize: 20)
+        textfield.setLeftPaddingPoints(8)
+        textfield.setRightPaddingPoints(8)
+        textfield.returnKeyType = .done
         return textfield
     }()
     
@@ -36,19 +46,27 @@ class AddRecipeVC: UIViewController {
         view.backgroundColor = .systemGray
         setupConstraints()
         addButtonAction()
+        self.hideKeyboardWhenTappedAround()
     }
     
     private func setupConstraints() {
         view.addSubview(titleTF)
         view.addSubview(addButton)
+        view.addSubview(ingredientTF)
         titleTF.translatesAutoresizingMaskIntoConstraints = false
         addButton.translatesAutoresizingMaskIntoConstraints = false
+        ingredientTF.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            titleTF.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            titleTF.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            titleTF.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            titleTF.heightAnchor.constraint(equalToConstant: 50),
+            titleTF.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            titleTF.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            titleTF.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            titleTF.heightAnchor.constraint(equalToConstant: 40),
+            
+            ingredientTF.topAnchor.constraint(equalTo: titleTF.bottomAnchor, constant: 16),
+            ingredientTF.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            ingredientTF.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            ingredientTF.heightAnchor.constraint(equalToConstant: 40),
             
             addButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
             addButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -67,4 +85,6 @@ class AddRecipeVC: UIViewController {
             navigationController?.popToRootViewController(animated: true)
         }
     }
+    
+    
 }

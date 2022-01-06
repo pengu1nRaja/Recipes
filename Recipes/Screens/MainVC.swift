@@ -31,7 +31,7 @@ class MainVC: UIViewController {
     
     private var name: String?
     private var recipeManager = RecipeManager.shared
-    private var recipes = RecipeManager.shared.getRecipes()
+    private var recipes: [Recipe]?
     // MARK: - viewDidLoad
     
     override func viewDidLoad() {
@@ -52,7 +52,7 @@ class MainVC: UIViewController {
     }
     
     private func setupNavBar() {
-        let item = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addRecipe))
+        let item = UIBarButtonItem(image: ImageConstant.addIcon, style: .plain, target: self, action: #selector(addRecipe))
         navigationItem.rightBarButtonItem = item
     }
     
@@ -68,14 +68,22 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     // MARK: - UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        recipes.count
+        recipes?.count ?? .zero
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.reuseIdentifier, for: indexPath)
-        cell.textLabel?.text = recipes[indexPath.row].title
+        cell.textLabel?.text = recipes?[indexPath.row].title
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let recipe = recipes?[indexPath.row] else { return }
+        let descriptionVC = RecipeDescriptionVC()
+        descriptionVC.title = recipe.title
+        descriptionVC.setInfo(recipe: recipe)
+        navigationController?.pushViewController(descriptionVC, animated: true)
     }
 }
 
@@ -83,6 +91,7 @@ extension MainVC: SettingNewValueDelegate {
     func setting(name: String) {
         let recipe = Recipe(title: name)
         recipeManager.addRecipe(recipe: recipe)
+        recipes = RecipeManager.shared.getRecipes()
         tableView.reloadData()
     }
 }
