@@ -8,9 +8,10 @@
 import Foundation
 
 class RecipeManager {
-    static let shared = RecipeManager()
-    private init() {}
     
+    static let shared = RecipeManager()
+    
+    private init() {}
     
     private var recipes: [Recipe] = []
     
@@ -21,6 +22,5 @@ class RecipeManager {
     func addRecipe(recipe: Recipe) {
         recipes.append(recipe)
     }
-    
     
 }

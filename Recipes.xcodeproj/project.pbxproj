@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		6630996A2785D42F003015FC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663099692785D42F003015FC /* MainVC.swift */; };
 		6630996C2785D48E003015FC /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6630996B2785D48E003015FC /* PurchaseVC.swift */; };
+		668313EB278A170A001B0F33 /* RCTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668313E8278A170A001B0F33 /* RCTabBar.swift */; };
+		668313EC278A170A001B0F33 /* RCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668313E9278A170A001B0F33 /* RCTabBarController.swift */; };
+		668313ED278A170A001B0F33 /* Device + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668313EA278A170A001B0F33 /* Device + Ext.swift */; };
 		672D5D812785D0A50077983B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D5D802785D0A50077983B /* AppDelegate.swift */; };
 		672D5D832785D0A50077983B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D5D822785D0A50077983B /* SceneDelegate.swift */; };
 		672D5D8A2785D0AA0077983B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672D5D892785D0AA0077983B /* Assets.xcassets */; };
 		672D5D8D2785D0AA0077983B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672D5D8B2785D0AA0077983B /* LaunchScreen.storyboard */; };
-		678F88A827872CA100170DBF /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F88A727872CA100170DBF /* CustomTabBar.swift */; };
 		678F88AA2787354E00170DBF /* EmptyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F88A92787354E00170DBF /* EmptyVC.swift */; };
 		678F88AC2788679C00170DBF /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F88AB2788679C00170DBF /* UIColor + Ext.swift */; };
 		67D1F5F02785E9C900EE714F /* IngredientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D1F5EF2785E9C900EE714F /* IngredientsVC.swift */; };
@@ -29,13 +31,15 @@
 /* Begin PBXFileReference section */
 		663099692785D42F003015FC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		6630996B2785D48E003015FC /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
+		668313E8278A170A001B0F33 /* RCTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCTabBar.swift; sourceTree = "<group>"; };
+		668313E9278A170A001B0F33 /* RCTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCTabBarController.swift; sourceTree = "<group>"; };
+		668313EA278A170A001B0F33 /* Device + Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device + Ext.swift"; sourceTree = "<group>"; };
 		672D5D7D2785D0A50077983B /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		672D5D802785D0A50077983B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		672D5D822785D0A50077983B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		672D5D892785D0AA0077983B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		672D5D8C2785D0AA0077983B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		672D5D8E2785D0AA0077983B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		678F88A727872CA100170DBF /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		678F88A92787354E00170DBF /* EmptyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyVC.swift; sourceTree = "<group>"; };
 		678F88AB2788679C00170DBF /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
 		67D1F5EF2785E9C900EE714F /* IngredientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsVC.swift; sourceTree = "<group>"; };
@@ -84,6 +88,15 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		668313EE278A18F6001B0F33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				668313E8278A170A001B0F33 /* RCTabBar.swift */,
+				668313E9278A170A001B0F33 /* RCTabBarController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		672D5D742785D0A50077983B = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +116,7 @@
 		672D5D7F2785D0A50077983B /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				668313EE278A18F6001B0F33 /* Views */,
 				67D788BB2786700300548004 /* Constants */,
 				67D1F5FB2785F76C00EE714F /* Extensions */,
 				67D1F5F62785F00E00EE714F /* Models */,
@@ -135,7 +149,7 @@
 				67D1F5FC2785F7CE00EE714F /* UITextField + Ext.swift */,
 				67D788B927866EE400548004 /* UIViewController + Ext.swift */,
 				678F88AB2788679C00170DBF /* UIColor + Ext.swift */,
-				678F88A727872CA100170DBF /* CustomTabBar.swift */,
+				668313EA278A170A001B0F33 /* Device + Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -222,13 +236,15 @@
 				67D1F5FD2785F7CE00EE714F /* UITextField + Ext.swift in Sources */,
 				678F88AA2787354E00170DBF /* EmptyVC.swift in Sources */,
 				67D788BA27866EE400548004 /* UIViewController + Ext.swift in Sources */,
-				678F88A827872CA100170DBF /* CustomTabBar.swift in Sources */,
+				668313EB278A170A001B0F33 /* RCTabBar.swift in Sources */,
+				668313ED278A170A001B0F33 /* Device + Ext.swift in Sources */,
 				6630996A2785D42F003015FC /* MainVC.swift in Sources */,
 				67D1F5FF2786045000EE714F /* RecipeDescriptionVC.swift in Sources */,
 				678F88AC2788679C00170DBF /* UIColor + Ext.swift in Sources */,
 				67D1F5F82785F01B00EE714F /* Recipe.swift in Sources */,
 				67D1F5F02785E9C900EE714F /* IngredientsVC.swift in Sources */,
 				67D788BD2786701900548004 /* ImageConstants.swift in Sources */,
+				668313EC278A170A001B0F33 /* RCTabBarController.swift in Sources */,
 				67D1F5F42785EFAA00EE714F /* RecipeManager.swift in Sources */,
 				6630996C2785D48E003015FC /* PurchaseVC.swift in Sources */,
 				67D1F5FA2785F3A000EE714F /* AddRecipeVC.swift in Sources */,
