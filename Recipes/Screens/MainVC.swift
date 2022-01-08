@@ -26,12 +26,22 @@ class MainVC: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.reuseIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorStyle = .none
+        tableView.allowsMultipleSelection = true
         return tableView
     }()
     
     private var name: String?
     private var recipeManager = RecipeManager.shared
-    private var recipes: [Recipe]?
+    private var recipes: [Recipe]? {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     // MARK: - viewDidLoad
     
     override func viewDidLoad() {
@@ -49,6 +59,8 @@ class MainVC: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         tableView.frame = view.bounds
+        
+
     }
     
     private func setupNavBar() {
@@ -73,8 +85,9 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.reuseIdentifier, for: indexPath)
+        cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = recipes?[indexPath.row].title
-        
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -92,6 +105,5 @@ extension MainVC: SettingNewValueDelegate {
         let recipe = Recipe(title: name)
         recipeManager.addRecipe(recipe: recipe)
         recipes = RecipeManager.shared.getRecipes()
-        tableView.reloadData()
     }
 }

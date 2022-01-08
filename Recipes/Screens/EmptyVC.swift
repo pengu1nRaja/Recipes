@@ -12,6 +12,7 @@ class EmptyVC: UIViewController {
     private lazy var addView: AddView = {
         let view = AddView()
         view.backgroundColor = .secondarySystemBackground
+        view.alpha = 0
         return view
     }()
     
@@ -19,6 +20,13 @@ class EmptyVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         setupConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        addView.alpha = 0
+        UIView.animate(withDuration: 0.3) {
+            self.addView.alpha = 1
+        }
     }
     
     private func setupConstraints() {

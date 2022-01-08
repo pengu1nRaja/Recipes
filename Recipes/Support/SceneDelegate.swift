@@ -20,16 +20,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func createTabbar() -> UITabBarController {
-        let tabbar = UITabBarController()
         let customTB = CustomTabBar()
-        UITabBar.appearance().tintColor = .secondarySystemBackground
+        UITabBar.appearance().tintColor = .selecteTintColor
+        UITabBar.appearance().unselectedItemTintColor = .unselectedTintColor
         UITabBar.appearance().backgroundColor = .systemBackground
         let mainNC = createMainNavigationController()
         let purchaseNC = createPurchaseNavigationController()
         let addNC = createEmptyController()
         let ingredientsNC = createIngredientNavigationController()
         let settingNC = createSettingsNavigationController()
-        tabbar.viewControllers = [mainNC, purchaseNC, ingredientsNC]
         customTB.viewControllers = [mainNC, purchaseNC, addNC, ingredientsNC, settingNC]
         
         return customTB
@@ -73,7 +72,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func configureNavigationBar() {
-        UINavigationBar.appearance().tintColor = .secondarySystemBackground
+        UINavigationBar.appearance().tintColor = .secondaryLabel
     }
 
     func sceneDidDisconnect(_ scene: UIScene) { }
