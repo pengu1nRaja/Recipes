@@ -16,7 +16,7 @@
 		672D5D832785D0A50077983B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D5D822785D0A50077983B /* SceneDelegate.swift */; };
 		672D5D8A2785D0AA0077983B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672D5D892785D0AA0077983B /* Assets.xcassets */; };
 		672D5D8D2785D0AA0077983B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672D5D8B2785D0AA0077983B /* LaunchScreen.storyboard */; };
-		678F88AA2787354E00170DBF /* EmptyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F88A92787354E00170DBF /* EmptyVC.swift */; };
+		678F88AA2787354E00170DBF /* AppendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F88A92787354E00170DBF /* AppendVC.swift */; };
 		678F88AC2788679C00170DBF /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678F88AB2788679C00170DBF /* UIColor + Ext.swift */; };
 		67D1F5F02785E9C900EE714F /* IngredientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D1F5EF2785E9C900EE714F /* IngredientsVC.swift */; };
 		67D1F5F42785EFAA00EE714F /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D1F5F32785EFAA00EE714F /* RecipeManager.swift */; };
@@ -40,7 +40,7 @@
 		672D5D892785D0AA0077983B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		672D5D8C2785D0AA0077983B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		672D5D8E2785D0AA0077983B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		678F88A92787354E00170DBF /* EmptyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyVC.swift; sourceTree = "<group>"; };
+		678F88A92787354E00170DBF /* AppendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendVC.swift; sourceTree = "<group>"; };
 		678F88AB2788679C00170DBF /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
 		67D1F5EF2785E9C900EE714F /* IngredientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsVC.swift; sourceTree = "<group>"; };
 		67D1F5F32785EFAA00EE714F /* RecipeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeManager.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 				67D1F5EF2785E9C900EE714F /* IngredientsVC.swift */,
 				67D1F5F92785F3A000EE714F /* AddRecipeVC.swift */,
 				67D1F5FE2786044F00EE714F /* RecipeDescriptionVC.swift */,
-				678F88A92787354E00170DBF /* EmptyVC.swift */,
+				678F88A92787354E00170DBF /* AppendVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 			files = (
 				672D5D812785D0A50077983B /* AppDelegate.swift in Sources */,
 				67D1F5FD2785F7CE00EE714F /* UITextField + Ext.swift in Sources */,
-				678F88AA2787354E00170DBF /* EmptyVC.swift in Sources */,
+				678F88AA2787354E00170DBF /* AppendVC.swift in Sources */,
 				67D788BA27866EE400548004 /* UIViewController + Ext.swift in Sources */,
 				668313EB278A170A001B0F33 /* RCTabBar.swift in Sources */,
 				668313ED278A170A001B0F33 /* Device + Ext.swift in Sources */,

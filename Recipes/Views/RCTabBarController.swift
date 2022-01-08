@@ -7,7 +7,7 @@ protocol RCTabBarControllerDelegate {
     func presentViewController()
 }
 
-class RCTabBarController: UITabBarController, RCTabBarControllerDelegate {
+class RCTabBarController: UITabBarController {
 
     private enum Constants {
         static let titleRecipe = "Рецепты"
@@ -50,9 +50,16 @@ class RCTabBarController: UITabBarController, RCTabBarControllerDelegate {
         UITabBar.appearance().backgroundColor = .systemBackground
     }
     
-    func presentViewController() {
-        let addVC = EmptyVC()
-        present(addVC, animated: true)
-    }
+}
+
+extension RCTabBarController: RCTabBarControllerDelegate {
     
+    // MARK: - RCTabBarControllerDelegate
+    
+    func presentViewController() {
+        let appendVC = AppendVC()
+        appendVC.modalPresentationStyle = .overFullScreen
+        appendVC.modalTransitionStyle = .crossDissolve
+        present(appendVC, animated: true)
+    }
 }

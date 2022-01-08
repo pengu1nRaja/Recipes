@@ -80,9 +80,12 @@ class AddRecipeVC: UIViewController {
     }
     
     @objc private func addRecipe() {
-        if let title = titleTF.text {
+        if let title = titleTF.text,
+           !title.isEmpty {
             delegate?.setting(name: title)
             navigationController?.popToRootViewController(animated: true)
+        } else {
+            #warning("добавить алерт")
         }
     }
     
