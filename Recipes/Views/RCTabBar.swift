@@ -5,9 +5,12 @@ import UIKit
 
 class RCTabBar: UITabBar {
     
+    var rcDelegate: RCTabBarControllerDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(publishButton)
+        buttonAction() 
     }
     
     private lazy var publishButton: UIButton =  {
@@ -22,6 +25,7 @@ class RCTabBar: UITabBar {
     required init?(coder: NSCoder) {
         fatalError("init(coder)")
     }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -45,6 +49,14 @@ class RCTabBar: UITabBar {
             index += 1
         }
         
+    }
+    
+    func buttonAction() {
+        publishButton.addTarget(self, action: #selector(presentAddMenu), for: .touchUpInside)
+    }
+    
+    @objc func presentAddMenu() {
+        rcDelegate?.presentViewController()
     }
     
 }

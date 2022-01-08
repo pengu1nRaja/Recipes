@@ -3,8 +3,12 @@
 
 import UIKit
 
-class RCTabBarController: UITabBarController {
-    
+protocol RCTabBarControllerDelegate {
+    func presentViewController()
+}
+
+class RCTabBarController: UITabBarController, RCTabBarControllerDelegate {
+
     private enum Constants {
         static let titleRecipe = "Рецепты"
         static let titlePurchase = "Список покупок"
@@ -16,7 +20,6 @@ class RCTabBarController: UITabBarController {
         super.viewDidLoad()
         let tabbar = UITabBar.appearance()
         tabbar.tintColor = .systemBlue
-        
         addChildViewControllers()
         configureTabBar()
     }
@@ -26,7 +29,11 @@ class RCTabBarController: UITabBarController {
         setChildViewController(PurchaseVC(), title: Constants.titlePurchase, imageName: "book", selectedImageName: "book.fill")
         setChildViewController(IngredientsVC(), title: Constants.titleIngredients, imageName: "list.bullet.circle", selectedImageName: "list.bullet.circle.fill")
         setChildViewController(UIViewController(), title: Constants.titleSettings, imageName: "gearshape", selectedImageName: "gearshape.fill")
-        setValue(RCTabBar(), forKey: "tabBar")
+        
+        let rcTabBar = RCTabBar()
+        rcTabBar.rcDelegate = self
+        
+        setValue(rcTabBar, forKey: "tabBar")
     }
     
     private func setChildViewController(_ childController: UIViewController, title: String, imageName: String, selectedImageName: String) {
@@ -41,6 +48,11 @@ class RCTabBarController: UITabBarController {
     
     private func configureTabBar() {
         UITabBar.appearance().backgroundColor = .systemBackground
+    }
+    
+    func presentViewController() {
+        let addVC = EmptyVC()
+        present(addVC, animated: true)
     }
     
 }
